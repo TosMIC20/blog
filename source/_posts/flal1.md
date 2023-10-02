@@ -13,7 +13,7 @@ update:
 
 ### Alphabet:
 
-An alphabet is a **finite**, **nonempty** set of symbols (usually denoted $\Sigma$ ), eg.
+An ***alphabet*** is a **finite**, **nonempty** set of symbols (usually denoted $\Sigma$ ), eg.
 
 - English alphabet: $\Sigma=\{a,b,\ldots,z\}$.
 - Binary alphabet: $\Sigma=\{0,1\}$.
@@ -22,7 +22,7 @@ An alphabet is a **finite**, **nonempty** set of symbols (usually denoted $\Sigm
 
 ### String:
 
-A string is a **finite** sequence of symbols chosen from some alphabet.
+A ***string*** is a **finite** sequence of symbols chosen from some alphabet.
 
 #### Empty String:
 
@@ -56,11 +56,11 @@ We have $\Sigma^*=\Sigma^+\cup\{\epsilon\}$.
 
 ### Language:
 
-If $\Sigma$ is an alphabet and $L\subseteq \Sigma^*$, then $L$ is a language over $\Sigma$. In other words, $L$ is an arbitrary set of strings from $\Sigma$ (can be empty!). The language $\varnothing$ and $\{\epsilon\}$ are not the same language!
+If $\Sigma$ is an alphabet and $L\subseteq \Sigma^*$, then $L$ is a ***language*** over $\Sigma$. In other words, $L$ is an arbitrary set of strings from $\Sigma$ (can be empty!). The language $\emptyset$ and $\{\epsilon\}$ are not the same language!
 
 ### Operations on Language:
 
-Set $L$, $M$ are languages on $\Sigma$.
+Set $L$, $M$ to be languages on $\Sigma$.
 
 #### Union:
 
