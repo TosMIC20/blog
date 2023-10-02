@@ -2,7 +2,7 @@
 title: An Interesting Problem
 tags:
   - math
-  - algorithm
+  - XOR
 categories:
   - whatever
 date: 2023-10-02 18:44:41
@@ -15,6 +15,8 @@ update:
 One day, a friend of mine (友人A, yuujin A) sent me a problem:
 
 - Consider all 64-bit binary numbers. Draw a graph, in which each node represents one number. Two nodes are connected if and only if they are exactly different in one bit. Now use 64 colors to color the nodes of the graph. Is there a coloring plan such that for any node, its 64 neighbors are in 64 different colors?
+
+<!-- more -->
 
 This is a rather tough problem. What I could think of is that the structure of the graph is just a 64-dimensional cube. So I tried 2-cube(a square) and 3-cube, and found that the former has a trivial coloring plan but the latter can't be colored that way.
 
