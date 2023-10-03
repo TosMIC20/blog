@@ -17,9 +17,9 @@ The master theorem is used to analyze the complexity of a certain type of recurr
 
 ### Theorem (Master Theorem):
 
-> Consider the recurrence:
+> Consider the recurrence: 
 >
-> $\begin{equation}\label{eq1}T(n)=aT(n/b)+f(n),\end{equation}$
+>$$\tag{1} T(n)=aT(n/b)+f(n),$$ 
 >
 > where $a\geq 1$, $b>1$, then $T(n)$ has the following asymptotic bounds:
 >
