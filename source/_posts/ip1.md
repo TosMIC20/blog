@@ -124,7 +124,7 @@ Then $y'_1$ and $y''_2$ would have different 1s, one of them will be even, the o
 
 Then $s(y'_1)=s(y''_1)$. Let's say that they are both on the right, then $f_n(y'_1)=f_n(y''_1)$ but $f_n(y'_2)\neq f_n(y''_2)$, this comes from $f_n$'s property. Since the four values are all in $[0,n)$, $(f_n(y'_1)+f_n(y'_2))\;\mathrm{mod}\;n$ and $(f_n(y''_1)+f_n(y''_2))\;\mathrm{mod}\;n$ must be different. So $f_{2n}(y')\neq f_{2n}(y'')$.
 
-Q.E.D for proposition 1.
+Q.E.D. proposition 1.
 
 ### The second proposition:
 
@@ -135,7 +135,7 @@ Consider the graph again, let's replace each edge with two oriented edges in dif
 
 Therefore, $n\cdot l=2^n$, which means $n$ has to be some power of $2$. Actually it shows some symmetry in the coloring plan.
 
-Q.E.D for proposition 2.
+Q.E.D. proposition 2.
 
 ## Summary:
 
