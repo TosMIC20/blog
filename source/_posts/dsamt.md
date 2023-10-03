@@ -204,7 +204,9 @@ Different from argument in proof for upper bound, we need to put a lower bound o
 
 Suppose that $n_{l,j}=1$, then using $x\leq\lfloor x\rfloor+1$ :
 
-$\begin{aligned}n_{l,j-1}/b&\leq n_{l,j}+1=2\\n_{l,j-2}/b&\leq n_{l,j-1}+1\leq 2b+1\\&\vdots\\n&\leq 2b^j+\displaystyle\sum_{l=1}^{j-1}b^l=2b^j+\frac{b^j-1}{b-1}-1<\frac{2b-1}{b-1}b^j\end{aligned}$
+$\begin{aligned}n_{l,j-1}/b&\leq n_{l,j}+1=2\\n_{l,j-2}/b&\leq n_{l,j-1}+1\leq 2b+1\\&\vdots\end{aligned}$
+
+$n\leq 2b^j+\displaystyle\sum_{l=1}^{j-1}b^l=2b^j+\frac{b^j-1}{b-1}-1<\frac{2b-1}{b-1}b^j$.
 
 So set $d=\frac{2b-1}{b-1}$, $j>\log_b\frac{n}{d}$.
 
