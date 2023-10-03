@@ -14,7 +14,7 @@ update:
 
 One day, a friend of mine (友人A, yuujin A) sent me a problem:
 
-- Consider all 64-bit binary numbers. Draw a graph, in which each node represents one number. Two nodes are connected if and only if they are exactly different in one bit. Now use 64 colors to color the nodes of the graph. Is there a coloring plan such that for any node, its 64 neighbors are in 64 different colors?
+> Consider all 64-bit binary numbers. Draw a graph, in which each node represents one number. Two nodes are connected if and only if they are exactly different in one bit. Now use 64 colors to color the nodes of the graph. Is there a coloring plan such that for any node, its 64 neighbors are in 64 different colors?
 
 <!-- more -->
 
@@ -22,13 +22,13 @@ This is a rather tough problem. What I could think of is that the structure of t
 
 At that time I had just taken a Complex Analysis class, and my thoughts were in a mess considering continuity of some functions, so I just passed the problem to another friend (友人B, yuujin B) who majors in math describing:
 
-- Use $n$ colors to color all vertices of an $n$-dimensional cube. Is there a plan such that for any node, its neighbors are in different colors? For example, $n=64$.
+> Use $n$ colors to color all vertices of an $n$-dimensional cube. Is there a plan such that for any node, its neighbors are in different colors? For example, $n=64$.
 
 While waiting for reply yuujin A and I exchanged some thoughts, but it seemed in vain.
 
 Later, yuujin A said that it actually came from a computer science problem:
 
-- In a prison the warden plays a game with two prisoners (never mind the setting). The warden shows prisoner A a chessboard, where every square has a white or black chessman on it. Then, the warden places a key on a square. Prisoner A must change one chessman's on the board. Later the key is removed, and the changed pattern will be shown to prisoner B, who is not allowed to communicate with prisoner A anymore. The question is, how can the two prisoners plan ahead, so that prisoner B can tell the location of the key just by the changed pattern.
+> In a prison the warden plays a game with two prisoners (never mind the setting). The warden shows prisoner A a chessboard, where every square has a white or black chessman on it. Then, the warden places a key on a square. Prisoner A must change one chessman's on the board. Later the key is removed, and the changed pattern will be shown to prisoner B, who is not allowed to communicate with prisoner A anymore. The question is, how can the two prisoners plan ahead, so that prisoner B can tell the location of the key just by the changed pattern.
 
 He said that he and his friends proved that the two problems are equivalent. I thought about it, and immediately came up with a rough proof.
 
@@ -44,13 +44,13 @@ This is a very interesting problem, but I don't even know where to start. I sent
 
 Yuujin C gave a proposition:
 
-- For any setup of initial chessmen and key, we can always find a chessman, such that if we change its color, then the XOR sum of all black chessmen's locations (number them 0~63) will be the location of the key.
+> For any setup of initial chessmen and key, we can always find a chessman, such that if we change its color, then the XOR sum of all black chessmen's locations (number them 0~63) will be the location of the key.
 
 Here comes the term XOR sum, which is just like $\Sigma$ sum but replacing all $+$ with $\oplus$ (one of the symbols used for xor). We denote it by $\bigoplus S$ here
 
 I thought his description of a pattern is awesome, which actually uses a subset of $A=\{0,1,\ldots,63\}$ to represent all locations of black chessmen. The problem can be abstracted to:
 
-- For any subset $B$ of $A=\{0,1,\ldots,63\}$ and $k\in A$ can we delete one element from $B$ or add one element from $A-B$ to $B$ so that the modified $B^{'}$ satisfies $\bigoplus B^{'}=k$ ?
+> For any subset $B$ of $A=\{0,1,\ldots,63\}$ and $k\in A$ can we delete one element from $B$ or add one element from $A-B$ to $B$ so that the modified $B^{'}$ satisfies $\bigoplus B^{'}=k$ ?
 
 To proceed we must be equipped with basic properties of XOR operation:
 
@@ -91,8 +91,9 @@ However, interestingly, if we go from $n=64$ to arbitrary $n$, we will find that
 
 I went to bed after figuring out that CS problem. However, it was midnight when I receive the reply from yuujin B:
 
-- If there is a coloring plan for $n$, then we can propose a plan for $2n$.
-- Such plan does not exist for $n!=2^m$.
+> 1. If there is a coloring plan for $n$, then we can propose a plan for $2n$.
+>
+> 2. Such plan does not exist for $n!=2^m$.
 
 It's stunning to know these propositions. The first means that we can write plans for $n=2^m$, since $n=2$ is trivial. The second means we can't find plans for other $n$. This is another equivalence:
 

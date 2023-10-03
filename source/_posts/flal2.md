@@ -23,18 +23,17 @@ update:
 
 ### Formal definition of context-free grammar:
 
-A ***context-free grammar*** (***CFG***) is a 4-tuple $G=(V,T,P,S)$, which satisfies:
-
-$$V\cap T=\emptyset,S\in V, $$
-
-$$P\subseteq\{A\rightarrow \alpha|A\in V,\alpha \in (V\cup T)^*\}$$
+> A ***context-free grammar*** (***CFG***) is a 4-tuple $G=(V,T,P,S)$, which satisfies:
+>
+> $$V\cap T=\emptyset,S\in V, $$
+>
+> $$P\subseteq\{A\rightarrow \alpha|A\in V,\alpha \in (V\cup T)^*\}$$
 
 The first two rules describe set of terminals, set of variables and start symbol. The last one requires all productions in $P$ to be in a specific form. Here are two examples of CFG:
 
 1. CFG $G_{01}=({S},{0,1},P,S)$, where elements of $P$ are:
    - $S\rightarrow 01$
    - $S\rightarrow 0S1$
-
 2. CFG $G_{exp}=(\{E,O\},\{(,),+,\cdot,v,d\},P,E)$, and $P$ contains exactly:
    - $E\rightarrow EOE$
    - $E\rightarrow (E)$
@@ -75,11 +74,12 @@ Expanding variable into the string by applying productions from head to body.
 
 We define a relation $\underset{G}{\Rightarrow}$ on $(V\cup T)^*$ to denote **derivation**. If $\alpha,\beta\in(V\cup T)^*$ and $A\rightarrow \gamma\in P$, then $\alpha A\beta \underset{G}{\Rightarrow}\alpha\gamma\beta$. If $G$ is understood, then we simply write $\alpha A\beta \Rightarrow\alpha\gamma\beta$. 
 
-We can extend this relation to its reflexive transitive closure $\overset{*}{\underset{G}{\Rightarrow}}$, which can be formally defined as:
-
-$$\forall \alpha\in(V\cup T)^*,\enspace \alpha\overset{*}{\underset{G}{\Rightarrow}}\alpha$$
-
-$$\enspace \alpha\overset{*}{\underset{G}{\Rightarrow}}\beta,\enspace \beta\underset{G}{\Rightarrow}\gamma\implies \alpha\overset{*}{\underset{G}{\Rightarrow}}\gamma$$
+> We can extend this relation to its reflexive transitive closure $\overset{*}{\underset{G}{\Rightarrow}}$, which can be formally defined as:
+>
+> $$\forall \alpha\in(V\cup T)^*,\enspace \alpha\overset{*}{\underset{G}{\Rightarrow}}\alpha$$
+>
+> $$\enspace \alpha\overset{*}{\underset{G}{\Rightarrow}}\beta,\enspace \beta\underset{G}{\Rightarrow}\gamma\implies \alpha\overset{*}{\underset{G}{\Rightarrow}}\gamma$$
+>
 
 ### Leftmost and rightmost derivation:
 
@@ -107,17 +107,19 @@ $E\underset{rm}{\Rightarrow} EOE\underset{rm}{\Rightarrow} EO(E)\underset{rm}{\R
 
 ### Sentential forms:
 
-Set CFG $G=(V,T,P,S)$, $\alpha\in(V\cup T)^*$ is a ***sentential form*** of $G$ iff $S\overset{*}{\Rightarrow}\alpha$.
-
-- If $S\overset{*}{\underset{lm}{\Rightarrow}}\alpha$, then $\alpha$ is a ***left-sentential form***.
-- If $S\overset{*}{\underset{rm}{\Rightarrow}}\alpha$, then $\alpha$ is a ***right-sentential form***.
-- If sentential form $\alpha\in T^*$, then $\alpha$ is a ***sentence***.
+> Set CFG $G=(V,T,P,S)$, $\alpha\in(V\cup T)^*$ is a ***sentential form*** of $G$ iff $S\overset{*}{\Rightarrow}\alpha$.
+>
+> - If $S\overset{*}{\underset{lm}{\Rightarrow}}\alpha$, then $\alpha$ is a ***left-sentential form***.
+> - If $S\overset{*}{\underset{rm}{\Rightarrow}}\alpha$, then $\alpha$ is a ***right-sentential form***.
+> - If sentential form $\alpha\in T^*$, then $\alpha$ is a ***sentence***.
+>
 
 ### Language of Context-Free Grammar:
 
-For CFG $G=(V,T,P,S)$, the ***language*** of $G$, denoted $L(G)$, is defined as:
-
-$$L(G)=\{w|w\in T^*\land S\overset{*}{\underset{G}{\Rightarrow}}w\}$$
+> For CFG $G=(V,T,P,S)$, the ***language*** of $G$, denoted $L(G)$, is defined as:
+>
+> $$L(G)=\{w|w\in T^*\land S\overset{*}{\underset{G}{\Rightarrow}}w\}$$
+>
 
 $L(G)$ is the set of all sentences of $G$.
 
@@ -158,19 +160,20 @@ graph TD
 	L --- O[d];
 ```
 
-For CFG $G=(V,T,P,S)$, a ***parse tree*** is a tree that satisfies the following conditions:
-
-1. Each interior node is labeled by a variable in $V$.
-
-2. Each leaf is labeled by either a variable, a terminal, or $\epsilon$. If the leaf is labeled $\epsilon$, it must be the only child of its parent.
-
-3. If an interior node is labeled $A$, and its children are labeled 
-
-   $$X_1,X_2,\ldots,X_k$$
-
-   respectively, from the left, then $A\rightarrow X_1X_2\cdots X_k$ is a production in $P$. 
-
-   Note that the only time that some $X_i$ can be $\epsilon$ is if that is the label of the only child, and $A\rightarrow\epsilon$ is in $P$ .
+> For CFG $G=(V,T,P,S)$, a ***parse tree*** is a tree that satisfies the following conditions:
+>
+> 1. Each interior node is labeled by a variable in $V$.
+>
+> 2. Each leaf is labeled by either a variable, a terminal, or $\epsilon$. If the leaf is labeled $\epsilon$, it must be the only child of its parent.
+>
+> 3. If an interior node is labeled $A$, and its children are labeled 
+>
+>    $$X_1,X_2,\ldots,X_k$$
+>
+>    respectively, from the left, then $A\rightarrow X_1X_2\cdots X_k$ is a production in $P$. 
+>
+>    Note that the only time that some $X_i$ can be $\epsilon$ is if that is the label of the only child, and $A\rightarrow\epsilon$ is in $P$ .
+>
 
 ### The yield of a parse tree:
 
@@ -181,12 +184,13 @@ Concatenate all leaves of a parse tree from the left, we get a string in $(V\cup
 
 ### Inference, derivation, and parse tree:
 
-For CFG $G=(V,T,P,S)$, the following are equivalent:
-
-1. The recursive inference procedure determines that terminal string $w$ is in the language of variable $A$.
-2. $A\overset{*}{\Rightarrow}w$.
-3. $A\overset{*}{\underset{lm}{\Rightarrow}}w$.
-4. $A\overset{*}{\underset{rm}{\Rightarrow}}w$.
-5. There is a parse tree with root $A$ and yield $w$.
+> For CFG $G=(V,T,P,S)$, the following are equivalent:
+>
+> 1. The recursive inference procedure determines that terminal string $w$ is in the language of variable $A$.
+> 2. $A\overset{*}{\Rightarrow}w$.
+> 3. $A\overset{*}{\underset{lm}{\Rightarrow}}w$.
+> 4. $A\overset{*}{\underset{rm}{\Rightarrow}}w$.
+> 5. There is a parse tree with root $A$ and yield $w$.
+>
 
 The proof is not hard but rather tedious. It may be shown in another blog.
