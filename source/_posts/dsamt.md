@@ -123,7 +123,9 @@ $T(n)=T(\lfloor n/2\rfloor)+T(\lceil n/2\rceil)+\Theta(n)$.
 
 Then the above argument might not work. But if we assume that $T(n)$ grows monotonically when $n$ is sufficient large, then we know these weird recurrences can be bounded by:
 
-$$\begin{align}T_u(n)&=aT_u(\lceil n/b\rceil)+f(n),\\T_l(n)&=aT_l(\lfloor n/b\rfloor)+f(n).\end{align}$$
+$T_u(n)=aT_u(\lceil n/b\rceil)+f(n),$
+
+$T_l(n)=aT_l(\lfloor n/b\rfloor)+f(n).$
 
 If we can obtain the same upper bound for $T_u(n)$ and lower bound for $T_l(n)$ as $T(n)$, then we can prove that all recurrences presented by $T(n)=aT(n/b)+f(n)$ can be asymptotically described by Master Theorem.
 
