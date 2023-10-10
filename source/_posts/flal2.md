@@ -193,4 +193,4 @@ Concatenate all leaves of a parse tree from the left, we get a string in $(V\cup
 > 5. There is a parse tree with root $A$ and yield $w$.
 >
 
-The proof is not hard but rather tedious. It may be shown in another blog.
+The proof is in L3 notes.
