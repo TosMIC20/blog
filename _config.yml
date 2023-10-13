@@ -108,10 +108,11 @@ deploy:
   type: ''
 
 markdown:
+  preset: 'default'
   anchors:
-    level: 2
+    level: 1
     collisionSuffix: ''
-    permalink: false
+    permalink: true
     permalinkClass: 'header-anchor'
     permalinkSide: 'left'
     permalinkSymbol: '¶'

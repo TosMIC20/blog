@@ -11,7 +11,7 @@ date: 2023-10-12 23:48:32
 update:
 ---
 
-# Statistical Mechanics
+## Statistical Mechanics
 
 ### Basic assumptions
 
