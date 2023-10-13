@@ -1,5 +1,5 @@
 ---
-title: Thermodynamics Life Saver 3
+title: Thermodynamics Lifesaver 3
 tags:
   - physics
   - thermodynamics
@@ -129,11 +129,11 @@ And $f$ must satisfies:
 
 The former yields $a<0$ and $e^b=\sqrt{\frac{-a}{\pi}}$, the latter yields $a=\frac{m}{2k_BT}$, so:
 
-$$f(v_x)=\sqrt{\frac{m}{2\pi k_BT}}e^{-\frac{mv_x^2}{2\pi k_BT}}.$$
+$$f(v_x)=\sqrt{\frac{m}{2\pi k_BT}}e^{-\frac{mv_x^2}{2k_BT}}.$$
 
 Moreover:
 
-$$F(\vec{v})=\left(\frac{m}{2\pi k_BT}\right)^\frac{3}{2}e^{-\frac{mv^2}{2\pi k_BT}}.$$
+$$F(\vec{v})=\left(\frac{m}{2\pi k_BT}\right)^\frac{3}{2}e^{-\frac{mv^2}{2k_BT}}.$$
 
 This is exactly what we see on textbooks.
 
@@ -160,5 +160,24 @@ We have a picture:
 
 ![](/blog/images/phytherm3img2.jpg)
 
-(to be continued, Maxwell-Boltzmann distribution and equipartition principle)
+### Maxwell-Boltzmann distribution:
 
+#### The distribution:
+
+The discussion before only works for monatomic gas, because for molecules with more atoms, the total energy does not purely come from kinetic energy of translation. There may be rotation, and there may be oscillation. But anyway, as long as we suppose them to be independent and *the states with the same total energy are equally likely*, we can apply our arguments above. 
+
+Boltzmann got this equation:
+
+$$F=\frac{1}{Z}e^{-\frac{E}{k_BT}}.$$
+
+Here $E$ is total energy, $Z$ is constant that takes into account the normalization. Actually we can do most of its derivation, but what we can't explain is that why the average energy of every term is exactly $\frac{1}{2}k_BT$. Here comes the equipartition:
+
+#### Equipartition:
+
+Every term in the energy expression that is quadratic in an independent dynamical variable designates a ***degree of freedom***.
+
+Generally, *the contribution of each degree of freedom to the average energy of a molecule is $\frac{1}{2}k_BT$*. This is called ***equipartition theorem***.
+
+Set $s$ to be the degree of freedom, then:
+
+$$\lang E\rang=\frac{s}{2}k_BT.$$

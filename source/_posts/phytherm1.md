@@ -1,5 +1,5 @@
 ---
-title: Thermodynamics Life Saver 1
+title: Thermodynamics Lifsaver 1
 tags:
   - physics
   - thermodynamics
