@@ -11,10 +11,9 @@ date: 2023-10-12 23:48:32
 update:
 ---
 
+# Statistical Mechanics
 
-## Statistical Mechanics
-
-### Basic assumptions:
+### Basic assumptions
 
 1. A gas consists of a very large number of molecules that make elastic collisions (of negligible time duration) with each other and with the walls of the container.
 2. The molecules are separated by distances that are large compared to their diameters, and they exert no forces on each other except when they collide.
@@ -22,9 +21,9 @@ update:
 
 <!-- more -->
 
-### Pressure and molecule motion:
+### Pressure and molecule motion
 
-#### Rms speed:
+#### Rms speed
 
 Since there's no preferred direction for velocity, we know the average velocity is zero:
 
@@ -36,13 +35,13 @@ Also, since there's no preferred direction and $v^2=v_x^2+v_y^2+v_z^2$, we know:
 
 $\lang v_x^2\rang=\lang v_y^2\rang=\lang v_z^2\rang=\frac{1}{3}\lang v^2\rang$.
 
-#### Internal energy:
+#### Internal energy
 
 For monatomic molecules, we can assert that the internal energy entirely comes from molecules' kinetic energy, which means:
 
 $U=N\lang K\rang=N\cdot \frac{1}{2}m\lang v^2\rang$.
 
-#### Pressure:
+#### Pressure
 
 Imagine a wall parallel to $yz$ plane. In a short time $dt$, consider all molecules with $x$-component of velocity of  $v_x$ in a cylinder like this:
 
@@ -70,7 +69,7 @@ What is $\displaystyle\int v_x^2f(v_x)dv_x$ ? It's just $\lang v_x^2\rang$! So $
 
 $$PV=\frac{2}{3}U.$$
 
-### Temperature:
+### Temperature
 
 The textbook here just relate the ideal gas law $PV=nRT=Nk_BT$ with $PV=\frac{2}{3}U$ here to yield:
 
@@ -78,11 +77,11 @@ $k_BT=\frac{2U}{3N}=\frac{2}{3}\lang K\rang$.
 
 *The temperature of an ideal gas is a measure of the average kinetic energy of the constituents.*
 
-### Velocity distribution of gases:
+### Velocity distribution of gases
 
-The textbook doesn't give the derivation of Maxwell's distribution. But it can be derived just using existing knowledge.
+The textbook doesn't give the derivation of Maxwell's distribution. But it can be derived just using existing knowledge. The following proof is inspired by a passage ([link](https://zhuanlan.zhihu.com/p/614405721)) on Zhihu.
 
-### Distribution of velocity:
+### Distribution of velocity
 
 What we want to do is finding a probability density function $F(\vec{v})$ for velocity vector $\vec{v}$. It is a function on $\mathbb{R}^3$, and can be also written as $F(v_x,v_y,v_z)$.
 
@@ -139,13 +138,13 @@ This is exactly what we see on textbooks.
 
 *Unfortunately, to be rigorous, we actually can't directly go to $T$ here, since the formal definition of $T$ hasn't been given. Also, our former discussion are restricted to monatomic gas.*
 
-### Distribution of speed:
+### Distribution of speed
 
 Be alert that the equation above is the **velocity** distribution. The **speed** distribution $F_s$ will be slightly different, since we are not distinguishing directions now.
 
 Imagine a sphere of radius $v_0$ in $\mathbb{R}^3$. Each dot on the surface of the sphere corresponds to a velocity vector $\vec{v}$ with magnitude $v_0$. They all have the same probability density $G(v_0^2)$. To get the probability density of speed at $v=v_0$, we need to integrate $G(v_0)$ over the sphere. $G(v_0^2)$ is a constant, so we would get $G(v_0^2)S_{sphere}=4\pi v_0^2G(v_0^2)$, this gives:
 
-$$F_s(v)=4\pi v^2\left(\frac{m}{2\pi k_BT}\right)^\frac{3}{2}e^{-\frac{mv^2}{2\pi k_BT}}.$$
+$$F_s(v)=4\pi v^2\left(\frac{m}{2\pi k_BT}\right)^\frac{3}{2}e^{-\frac{mv^2}{2k_BT}}.$$
 
 This is called Maxwellian distribution. We can calculate:
 
@@ -160,9 +159,9 @@ We have a picture:
 
 ![](/blog/images/phytherm3img2.jpg)
 
-### Maxwell-Boltzmann distribution:
+### Maxwell-Boltzmann distribution
 
-#### The distribution:
+#### The distribution
 
 The discussion before only works for monatomic gas, because for molecules with more atoms, the total energy does not purely come from kinetic energy of translation. There may be rotation, and there may be oscillation. But anyway, as long as we suppose them to be independent and *the states with the same total energy are equally likely*, we can apply our arguments above. 
 
@@ -172,7 +171,7 @@ $$F=\frac{1}{Z}e^{-\frac{E}{k_BT}}.$$
 
 Here $E$ is total energy, $Z$ is constant that takes into account the normalization. Actually we can do most of its derivation, but what we can't explain is that why the average energy of every term is exactly $\frac{1}{2}k_BT$. Here comes the equipartition:
 
-#### Equipartition:
+#### Equipartition
 
 Every term in the energy expression that is quadratic in an independent dynamical variable designates a ***degree of freedom***.
 
