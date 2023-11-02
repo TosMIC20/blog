@@ -67,7 +67,7 @@ To get the total pressure, we need to sum over all $P_{v_x}$, which means integr
 
 What is $\displaystyle\int v_x^2f(v_x)dv_x$ ? It's just $\lang v_x^2\rang$! So $P=m\frac{N}{V}\lang v_x^2\rang$. We also have $U=N\cdot \frac{1}{2}m\lang v^2\rang=\frac{3}{2}mN\lang v_x^2\rang$. Therefore we get a beautiful equation:
 
-$$PV=\frac{2}{3}U.$$
+> $$PV=\frac{2}{3}U.$$
 
 ### Temperature
 
@@ -128,11 +128,11 @@ And $f$ must satisfies:
 
 The former yields $a<0$ and $e^b=\sqrt{\frac{-a}{\pi}}$, the latter yields $a=\frac{m}{2k_BT}$, so:
 
-$$f(v_x)=\sqrt{\frac{m}{2\pi k_BT}}e^{-\frac{mv_x^2}{2k_BT}}.$$
+> $$f(v_x)=\sqrt{\frac{m}{2\pi k_BT}}e^{-\frac{mv_x^2}{2k_BT}}.$$
 
 Moreover:
 
-$$F(\vec{v})=\left(\frac{m}{2\pi k_BT}\right)^\frac{3}{2}e^{-\frac{mv^2}{2k_BT}}.$$
+> $$F(\vec{v})=\left(\frac{m}{2\pi k_BT}\right)^\frac{3}{2}e^{-\frac{mv^2}{2k_BT}}.$$
 
 This is exactly what we see on textbooks.
 
@@ -144,7 +144,7 @@ Be alert that the equation above is the **velocity** distribution. The **speed**
 
 Imagine a sphere of radius $v_0$ in $\mathbb{R}^3$. Each dot on the surface of the sphere corresponds to a velocity vector $\vec{v}$ with magnitude $v_0$. They all have the same probability density $G(v_0^2)$. To get the probability density of speed at $v=v_0$, we need to integrate $G(v_0)$ over the sphere. $G(v_0^2)$ is a constant, so we would get $G(v_0^2)S_{sphere}=4\pi v_0^2G(v_0^2)$, this gives:
 
-$$F_s(v)=4\pi v^2\left(\frac{m}{2\pi k_BT}\right)^\frac{3}{2}e^{-\frac{mv^2}{2k_BT}}.$$
+> $$F_s(v)=4\pi v^2\left(\frac{m}{2\pi k_BT}\right)^\frac{3}{2}e^{-\frac{mv^2}{2k_BT}}.$$
 
 This is called Maxwellian distribution. We can calculate:
 
@@ -167,7 +167,7 @@ The discussion before only works for monatomic gas, because for molecules with m
 
 Boltzmann got this equation:
 
-$$F=\frac{1}{Z}e^{-\frac{E}{k_BT}}.$$
+> $$F=\frac{1}{Z}e^{-\frac{E}{k_BT}}.$$
 
 Here $E$ is total energy, $Z$ is constant that takes into account the normalization. Actually we can do most of its derivation, but what we can't explain is that why the average energy of every term is exactly $\frac{1}{2}k_BT$. Here comes the equipartition:
 
@@ -179,4 +179,4 @@ Generally, *the contribution of each degree of freedom to the average energy of 
 
 Set $s$ to be the degree of freedom, then:
 
-$$\lang E\rang=\frac{s}{2}k_BT.$$
+> $$\lang E\rang=\frac{s}{2}k_BT.$$

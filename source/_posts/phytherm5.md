@@ -150,4 +150,66 @@ Therefore, entropy is a more intrinsic description of the 2nd law.
 
 Recall that we asserted that the Carnot engine is the most efficient engine. Now we can prove this assertion with entropy.
 
-(to be continued...)
+First, we prove that efficiency of any reversible cycle is less than that of a similar Carnot cycle.
+
+#### Reversible case
+
+We prove this in three steps:
+
+1. Convert $p$-$V$ diagram to $T$-$S$ diagram.
+2. Find $dQ$ and $dW$ in the new coordinate, and find $W$ and $Q_{in}$.
+3. Show that for any curve $\eta<1-\frac{T_{min}}{T_{max}}=\eta_C$.
+
+##### First step
+
+We have already done first step actually. What is a $T$-$S$ diagram? Recall that:
+
+$dS=d(C_V\ln T+nR\ln V)$.
+
+Then:
+
+$\displaystyle\begin{aligned}S&=C_V\ln T+nR\ln V+C\\ &=C_V(\ln T+\frac{nR}{C_V}\ln V)+C\\ &=C_V(\ln T+\frac{C_p-C_V}{C_V}\ln V)+C\\ &=C_V\ln TV^{\gamma-1}+C\\ &=C_V\ln\frac{PV^\gamma}{nR}+C\\ &=C_V\ln PV^\gamma +C.\end{aligned}$
+
+Also with $T=\frac{PV}{nR}$, it's actually the same with the change of coordinate in the beginning of this note.
+
+You can prove that a closed cycle in $p$-$V$ diagram is equivalent to a closed cycle in $T$-$S$ diagram. Also, engines in $p$-$V$ diagram all run clockwise. It's easy to know that they run clockwise in $T$-$S$ diagram, too.
+
+##### Second step
+
+Now we are calculating $Q_{in}$ and $W$ of a closed cycle in $T$-$S$ diagram. First consider writing $dQ$ and $dW$:
+
+- $dQ=TdS$.
+- $dW=dQ-dU=TdS-C_VdT$.
+
+Then:
+
+- What is $Q_{in}$? We need to find all segments $A_i$ in the cycle such that $dQ=TdS>0$. Since $T$ is always positive, $dQ>0$ if and only if $dS>0$, that is, the segment is going right. Also, $\int TdS$ is actually area under curve, you can imagine yourself what $Q_{in}$ is.
+- What is $W$? We integrate $TdS-C_VdT$ over the loop. $C_VdT$ is a perfect differential (even if $C_V$ is a function of $T$ !), so it would yield $0$, what is $\oint TdS$? It's the area surrounded by the curve (why?).
+
+Also consider the highest segment of the curve, it must be going right (why?). So $Q_{in}$ is at least the area under the highest segment of the curve.
+
+![](/blog/images/phytherm5img1.jpg)
+
+##### Third step
+
+For any cycle, $Q_{in}\geq S_1+S_2$, and $W=S_2$. We have:
+
+$\displaystyle \eta=\frac{W}{Q_{in}}\leq\frac{S_2}{S_1+S_2}=1-\frac{S_1}{S_1+S_2}\leq 1-\frac{S_{CDEH}}{S_{CDFG}}=1-\frac{T_{min}}{T_{max}}=\eta_C$.
+
+You can also derive this just using integral. But anyway, we arrived at the conclusion that the efficiency of any reversible cycle is less that that of a similar Carnot cycle (Carnot cycle running between $T_{max}$ and $T_{min}$).
+
+#### Irreversibility
+
+If there are any irreversibility in the cycle, assume that we put in the same $Q_{in}$, then the engine will not return to the initial state, otherwise $\Delta S=0$, it's reversible. Thus, $\Delta S>0$, if we want the engine to return to initial state, we need to pay extra entropy, that is, dump more heat into the environment (why?). Thus with the same $Q_{in}$, now $|Q_{out}|$ increases. We must have:
+
+$\displaystyle\eta_{irrev}=1-\frac{|Q_{out}|}{Q_{in}}<\eta_{rev}$.
+
+## Postscript
+
+This is probably the end of thermodynamics lifesaver series. It is just a part of notes of University Physics B. Most definitions are copied from textbook: *Physics for Scientists and Engineers with Modern Physics, Third Edition*, and from lecture slides. 
+
+I came up with some of the proofs myself and didn't check them with major ideas in modern physics, so there are probably mistakes in them. After all, I do not major nor minor in physics.
+
+There should have been more on statistical mechanics in order to better understand entropy, but the course doesn't cover that (actually mentions a little, but not better than none).
+
+If you find the series helpful, thank you for sparing time reading it. If you find any mistake, you can contact me or post issue at github repo of this blog site.

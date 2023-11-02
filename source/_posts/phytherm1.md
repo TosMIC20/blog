@@ -1,5 +1,5 @@
 ---
-title: Thermodynamics Lifsaver 1
+title: Thermodynamics Lifesaver 1
 tags:
   - physics
   - thermodynamics
@@ -67,7 +67,7 @@ In the case of Kelvin temperature scale, we define $T=0$ as the point where $P=0
 
 Here comes the famous (or infamous if you write the symbols in certain order) equation:
 
-$$\tag{1}PV=nRT$$
+> $$\tag{1}PV=nRT$$
 
 This equation comes from a series of experimental fact, and works well with some real gas under some conditions. Notice that we are not introducing the concept of *ideal gas*, because in classical thermodynamics, 
 

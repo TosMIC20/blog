@@ -107,7 +107,7 @@ The Carnot cycle consists of four legs:
 Heat flow only comes from isothermal processes:
 
 - Step $\text{I}$ : $Q_h=W_{AB}$.
-  - Step $\text{III}$ : $Q_c=-W_{CD}$, $W_{CD}<0$, $Q_c$ is made positive for convenience.
+- Step $\text{III}$ : $|Q_c|=-W_{CD}$, $W_{CD}<0$, $Q_c$ is made positive for convenience.
 
 $W_{AB}$ and $W_{CD}$ is easy to get:
 
@@ -115,9 +115,9 @@ $\displaystyle W_{AB}=\int_{V_A}^{V_B}pdV=\int_{V_A}^{V_B}\frac{nRT_h}{V}dV=nRT_
 
 $\displaystyle W_{CD}=\int_{V_C}^{V_D}pdV=\int_{V_C}^{V_D}\frac{nRT_c}{V}dV=nRT_c\ln\frac{V_D}{V_C}<0$.
 
-This is a cycle, we have $W=Q=Q_h-Q_c$, so:
+This is a cycle, we have $W=Q=Q_h-|Q_c|$, so:
 
-$\displaystyle \eta=\frac{W}{Q_h}=\frac{Q_h-Q_c}{Q_h}=1-\frac{Q_c}{Q_h}$.
+$\displaystyle \eta=\frac{W}{Q_h}=\frac{Q_h-|Q_c|}{Q_h}=1-\frac{|Q_c|}{Q_h}$.
 
 Also, we can express $\frac{V_D}{V_C}$ in terms of $\frac{V_B}{V_A}$:
 
@@ -127,7 +127,7 @@ thus $\displaystyle \left(\frac{V_D}{V_C}\right)^{\gamma-1}=\left(\frac{V_A}{V_B
 
 So:
 
-$\displaystyle \eta=1-\frac{Q_c}{Q_h}=1+\frac{nRT_c\ln\frac{V_D}{V_C}}{nRT_h\ln\frac{V_B}{V_A}}=1-\frac{T_c}{T_h}$.
+$\displaystyle \eta=1-\frac{|Q_c|}{Q_h}=1+\frac{nRT_c\ln\frac{V_D}{V_C}}{nRT_h\ln\frac{V_B}{V_A}}=1-\frac{T_c}{T_h}$.
 
 This means the efficiency of a Carnot cycle only depends on the temperatures of the two thermal reservoirs.
 
@@ -200,4 +200,4 @@ If we know the efficiency $\eta$ of the engine that runs in reverse, we can calc
 
 $\displaystyle K_{hp}=\frac{Q_h}{W}=\frac{1}{\eta}\geq \frac{1}{\eta_C}$,
 
-$\displaystyle K_{ref}=\frac{Q_c}{W}=\frac{Q_h-W}{W}=\frac{1}{\eta}-1\geq\frac{1}{\eta_C}-1$.
+$\displaystyle K_{ref}=\frac{|Q_c|}{W}=\frac{Q_h-W}{W}=\frac{1}{\eta}-1\geq\frac{1}{\eta_C}-1$.
