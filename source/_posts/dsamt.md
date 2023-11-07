@@ -23,7 +23,7 @@ The master theorem is used to analyze the complexity of a certain type of recurr
 >
 > where $a\geq 1$, $b>1$, then $T(n)$ has the following asymptotic bounds:
 >
-> 1. If $f(n)=\Omicron(n^{\log_b a-\epsilon})$ for some constant $\epsilon\geq 0$, then $T(n)=\Theta(n^{\log_b a})$.
+> 1. If $f(n)=O(n^{\log_b a-\epsilon})$ for some constant $\epsilon\geq 0$, then $T(n)=\Theta(n^{\log_b a})$.
 > 2. If $f(n)=\Theta(n^{\log_b a}\lg^k n)$, then $T(n)=\Theta(n^{\log_b a}\lg^{k+1}n)$.
 > 3. If $f(n)=\Omega(n^{\log_b a+\epsilon})$ for some constant $\epsilon\geq 0$, and if $af(n/b)\leq cf(n)$ for some constant $0<c<1$ and sufficiently large $n$, then $T(n)=\Theta(f(n))$.
 >
@@ -64,7 +64,7 @@ Set $g(n)=\sum\limits_{i=0}^{\log_b n-1}a^if(n/b^i)$, here's lemma 2.
 
 > The following is true for $g(n)=\sum\limits_{i=0}^{\log_b n-1}a^if(n/b^i)$
 >
-> 1. If $f(n)=\Omicron(n^{\log_b a-\epsilon})$ for some constant $\epsilon\geq 0$, then $g(n)=\Omicron(n^{\log_b a})$.
+> 1. If $f(n)=O(n^{\log_b a-\epsilon})$ for some constant $\epsilon\geq 0$, then $g(n)=O(n^{\log_b a})$.
 > 2. If $f(n)=\Theta(n^{\log_b a}\lg^k n)$, then $g(n)=\Theta(n^{\log_b a}\lg^{k+1}n)$.
 > 3. if $af(n/b)\leq cf(n)$ for some constant $0<c<1$ and sufficiently large $n$, then $g(n)=\Theta(f(n))$.
 >
@@ -73,9 +73,9 @@ Set $g(n)=\sum\limits_{i=0}^{\log_b n-1}a^if(n/b^i)$, here's lemma 2.
 
 #### Case 1:
 
-Insert $f(n)=\Omicron(n^{\log_b a-\epsilon})$ into lemma 1:
+Insert $f(n)=O(n^{\log_b a-\epsilon})$ into lemma 1:
 
-$\begin{aligned}g(n)&=\sum_{i=0}^{\log_b n-1}a^i\Omicron\left(\left(\frac{n}{b^i}\right)^{\log_b a-\epsilon}\right)\\ &=\Omicron\left(\sum_{i=0}^{\log_b n-1}a^i\left(\frac{n}{b^i}\right)^{\log_b a-\epsilon}\right)\\ &=\Omicron\left(n^{\log_b a-\epsilon}\sum_{i=0}^{\log_b n-1}\left(\frac{a b^\epsilon}{b^{\log_b a}}\right)^{i}\right)\\ &=\Omicron\left(n^{\log_b a-\epsilon}\sum_{i=0}^{\log_b n-1}(b^\epsilon)^i\right)\\ &=\Omicron\left(n^{\log_b a-\epsilon}\cdot \frac{b^{\epsilon\log_b n}-1}{b^\epsilon-1}\right)\\ &=\Omicron\left(n^{\log_b a-\epsilon}\cdot \Omicron(n^\epsilon)\right)\\ &=\Omicron(n^{\log_b a})\end{aligned}$
+$\begin{aligned}g(n)&=\sum_{i=0}^{\log_b n-1}a^iO\left(\left(\frac{n}{b^i}\right)^{\log_b a-\epsilon}\right)\\ &=O\left(\sum_{i=0}^{\log_b n-1}a^i\left(\frac{n}{b^i}\right)^{\log_b a-\epsilon}\right)\\ &=O\left(n^{\log_b a-\epsilon}\sum_{i=0}^{\log_b n-1}\left(\frac{a b^\epsilon}{b^{\log_b a}}\right)^{i}\right)\\ &=O\left(n^{\log_b a-\epsilon}\sum_{i=0}^{\log_b n-1}(b^\epsilon)^i\right)\\ &=O\left(n^{\log_b a-\epsilon}\cdot \frac{b^{\epsilon\log_b n}-1}{b^\epsilon-1}\right)\\ &=O\left(n^{\log_b a-\epsilon}\cdot O(n^\epsilon)\right)\\ &=O(n^{\log_b a})\end{aligned}$
 
 Q.E.D. case 1.
 
@@ -97,9 +97,9 @@ For lower bound, since $f(n)$ is nonnegative,
 
 $\begin{aligned}g(n)&=\sum_{i=0}^{\log_b n-1}a^if(n/b^i)\\ &=f(n)+\sum_{i=1}^{\log_b n-1}a^if(n/b^i)\\ &=\Omega(f(n)).\end{aligned}$
 
-For upper bound, we use the regularity condition. From $af(n/b)\leq cf(n)$ with induction we get $a^if(n/b^i)\leq c^if(n)$. Although it only holds for sufficiently large $n$, but when $n\to \infin$, there must be only finitely many $a^if(n/b^i)$ that doesn't satisfy the inequation, but finite means $\Omicron(1)$, so:
+For upper bound, we use the regularity condition. From $af(n/b)\leq cf(n)$ with induction we get $a^if(n/b^i)\leq c^if(n)$. Although it only holds for sufficiently large $n$, but when $n\to \infin$, there must be only finitely many $a^if(n/b^i)$ that doesn't satisfy the inequation, but finite means $O(1)$, so:
 
-$\begin{aligned}g(n)&=\sum_{i=0}^{\log_b n-1}a^if(n/b^i)\\ &\leq \sum_{i=0}^{\log_b n-1}c^if(n)+\Omicron(1)\\ &\leq f(n)\sum_{i=0}^\infin c^i+\Omicron(1)\\ &=f(n)\cdot \frac{1}{1-c}+\Omicron(1)\\ &=\Omicron(f(n)).\end{aligned}$
+$\begin{aligned}g(n)&=\sum_{i=0}^{\log_b n-1}a^if(n/b^i)\\ &\leq \sum_{i=0}^{\log_b n-1}c^if(n)+O(1)\\ &\leq f(n)\sum_{i=0}^\infin c^i+O(1)\\ &=f(n)\cdot \frac{1}{1-c}+O(1)\\ &=O(f(n)).\end{aligned}$
 
 Q.E.D. case 3.
 
@@ -107,7 +107,7 @@ Q.E.D. case 3.
 
 Now we can prove the Master Theorem on this special case.
 
-1. $T(n)=\Theta(n^{\log_b a})+\Omicron(n^{\log_b a})=\Theta(n^{\log_b a})$.
+1. $T(n)=\Theta(n^{\log_b a})+O(n^{\log_b a})=\Theta(n^{\log_b a})$.
 2. $T(n)=\Theta(n^{\log_b a})+\Theta(n^{\log_b a}\lg^{k+1}n)=\Theta(n^{\log_b a}\lg^{k+1}n)$.
 3. $T(n)=\Theta(n^{\log_b a})+\Theta(f(n))=\Theta(f(n))$, because $f(n)=\Omega(n^{\log_b a+\epsilon})$.
 
@@ -131,7 +131,7 @@ If we can obtain the same upper bound for $T_u(n)$ and lower bound for $T_l(n)$ 
 
 ### Upper bound:
 
-We intend to prove that for $T_u(n)$, with other condition the same as $T(n)$, in three cases are respectively: (1) $\Omicron(n^{\log_b a})$; (2) $\Omicron(n^{\log_b a}\lg^{k+1}n)$; (3) $\Omicron(f(n))$.
+We intend to prove that for $T_u(n)$, with other condition the same as $T(n)$, in three cases are respectively: (1) $O(n^{\log_b a})$; (2) $O(n^{\log_b a}\lg^{k+1}n)$; (3) $O(f(n))$.
 
 We start with a similar lemma to lemma 1 in special case.
 
@@ -161,11 +161,11 @@ $\begin{aligned}n_{u,i}&\leq \frac{n}{b^i}+\displaystyle\sum_{j=0}^{i-1}\frac{1}
 
 thus:
 
-$\begin{aligned}n_{u,\lfloor\log_b n\rfloor}&< \frac{n}{b^{\lfloor\log_b n\rfloor}}+\frac{b}{b-1}\\ &\leq \frac{n}{b^{\log_b n-1}}+\frac{b}{b-1}\\ &=b+\frac{b}{b-1}\\ &=\Omicron(1).\end{aligned}$
+$\begin{aligned}n_{u,\lfloor\log_b n\rfloor}&< \frac{n}{b^{\lfloor\log_b n\rfloor}}+\frac{b}{b-1}\\ &\leq \frac{n}{b^{\log_b n-1}}+\frac{b}{b-1}\\ &=b+\frac{b}{b-1}\\ &=O(1).\end{aligned}$
 
 Which means that when we recursively expand $T_u(n)$, after $\lfloor\log_b n\rfloor$ steps we will get constant running time, so:
 
-$T_u(n)=aT_u(\lceil n/b\rceil)+f(n)=a^2T_u(n_{u,2})+af(n_{u,1})+f(n_{u,0})=\cdots=a^{\lfloor\log_b n\rfloor}T_u(n_{u,\lfloor\log_b n\rfloor})+\displaystyle\sum_{i=0}^{\lfloor\log_b n\rfloor-1}a^if(n_{u,i})=\Theta(n^{\log_b n})\Omicron(1)+\displaystyle\sum_{i=0}^{\lfloor\log_b n\rfloor-1}a^if(n_{u,i}).$
+$T_u(n)=aT_u(\lceil n/b\rceil)+f(n)=a^2T_u(n_{u,2})+af(n_{u,1})+f(n_{u,0})=\cdots=a^{\lfloor\log_b n\rfloor}T_u(n_{u,\lfloor\log_b n\rfloor})+\displaystyle\sum_{i=0}^{\lfloor\log_b n\rfloor-1}a^if(n_{u,i})=\Theta(n^{\log_b n})O(1)+\displaystyle\sum_{i=0}^{\lfloor\log_b n\rfloor-1}a^if(n_{u,i}).$
 
 Q.E.D. lemma 3.
 
@@ -175,16 +175,16 @@ Then let $g_u(n)=\displaystyle\sum_{i=0}^{\lfloor\log_b n\rfloor-1}a^if(n_{u,i})
 
 > The following is true for $g_u(n)=\displaystyle\sum_{i=0}^{\lfloor\log_b n\rfloor-1}a^if(n_{u,i})$
 >
-> 1. If $f(n)=\Omicron(n^{\log_b a-\epsilon})$ for some constant $\epsilon\geq 0$, then $g_u(n)=\Omicron(n^{\log_b a})$.
-> 2. If $f(n)=\Theta(n^{\log_b a}\lg^k n)$, then $g_u(n)=\Omicron(n^{\log_b a}\lg^{k+1}n)$.
-> 3. if $af(\lceil n/b\rceil)\leq cf(n)$ for some constant $0<c<1$ and sufficiently large $n$, then $g_u(n)=\Omicron(f(n))$.
+> 1. If $f(n)=O(n^{\log_b a-\epsilon})$ for some constant $\epsilon\geq 0$, then $g_u(n)=O(n^{\log_b a})$.
+> 2. If $f(n)=\Theta(n^{\log_b a}\lg^k n)$, then $g_u(n)=O(n^{\log_b a}\lg^{k+1}n)$.
+> 3. if $af(\lceil n/b\rceil)\leq cf(n)$ for some constant $0<c<1$ and sufficiently large $n$, then $g_u(n)=O(f(n))$.
 
 ***Proof:***
 
 Case 1 and case 2 can be similarly proved like lemma 2 by proving:
 
-1. Case 1: $f(n_{u,i})=\Omicron((n/b^i)^{\log_b a-\epsilon})$,
-2. Case 2: $f(n_{u,i})=\Omicron((n/b^i)^{\log_b a}\lg^k(n/b^i))$.
+1. Case 1: $f(n_{u,i})=O((n/b^i)^{\log_b a-\epsilon})$,
+2. Case 2: $f(n_{u,i})=O((n/b^i)^{\log_b a}\lg^k(n/b^i))$.
 
 Here we assume the monotonicity of $f(n)$ for sufficiently large $n$ and prove with inequation given in lemma 3. The detail is tedious and thus left out here.
 
