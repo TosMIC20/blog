@@ -84,7 +84,7 @@ $\displaystyle \int\delta(\vec{x}-\vec{x}_0)f(\vec{x})d\vec{x}=f(\vec{x}_0).$
 
 A point charge at $\vec{r}_i$ has a charge distribution $dq=q_i\delta(\vec{r}-\vec{r}_i)d\vec{r}$, thus:
 
-$\displaystyle \vec{E}({\vec{r}_0})=\frac{1}{4\pi\varepsilon_{0}}\int\frac{dq}{r'^{2}}\hat{r}'=\frac{1}{4\pi\varepsilon_{0}}\frac{q}{||\vec{r}_0-\vec{r}_i||^{2}}(\hat{r}_0-\hat{r}_i)$.
+$\displaystyle \vec{E}({\vec{r}_0})=\frac{1}{4\pi\varepsilon_{0}}\int\frac{dq}{r'^{2}}\hat{r}'=\frac{1}{4\pi\varepsilon_{0}}\frac{q}{||\vec{r}_0-\vec{r}_i||^{2}}\hat{r}'$.
 
 Where $\vec{r}'=\vec{r}_0-\vec{r}$, which is consistent to calculation of  discrete charge distribution.
 
@@ -130,8 +130,9 @@ The sheet is placed at $x$-$z$ plane. It has radius $R$ and area charge density 
 
 Due to symmetry, we just need to calculate $E_y$ :
 
-$\begin{aligned}E_y&=\frac{1}{4\pi\varepsilon_{0}}\iint_{x^2+z^2\leq r^2}\frac{\sigma\cos\theta}{r'^2}dxdz\\&=\frac{1}{4\pi\varepsilon_{0}}\int_0^{2\pi}d\theta\int_0^R\frac{\sigma Lr}{(r^2+L^2)^\frac{3}{2}}dr\\&=\frac{\sigma L}{2\varepsilon_0}(\frac{1}{L}-\frac{1}{\sqrt{R^2+L^2}}).\end{aligned}$
-
+$$
+\begin{aligned}E_y&=\frac{1}{4\pi\varepsilon_{0}}\iint_{x^2+z^2\leq r^2}\frac{\sigma\cos\theta}{r'^2}dxdz\\&=\frac{1}{4\pi\varepsilon_{0}}\int_0^{2\pi}d\theta\int_0^R\frac{\sigma Lr}{(r^2+L^2)^\frac{3}{2}}dr\\&=\frac{\sigma L}{2\varepsilon_0}(\frac{1}{L}-\frac{1}{\sqrt{R^2+L^2}}).\end{aligned}
+$$
 If $R\gg L$, then $\displaystyle E_y\approx \frac{\sigma}{2\varepsilon_0}$. This result is important. Now let's prove a conclusion:
 
 > Given a uniformly charged sheet, no matter what shape it is, the electric field at a point above the sheet and close enough to the sheet is roughly $\frac{\sigma}{2\varepsilon_0}$.
@@ -166,21 +167,21 @@ Where $\vec{r}_+=\vec{r}-\frac{1}{2}\vec{d}$ and $\vec{r}_-=\vec{r}+\frac{1}{2}\
 
 In this case,
 
-$\begin{aligned}\vec{E}&=\frac{q}{4\pi\varepsilon_0}(\frac{1}{(r-d/2)^2}-\frac{1}{(r+d/2)^2})\hat{i}\\&=\frac{q}{4\pi\varepsilon_0}\frac{2rd}{(r-d/2)^2(r+d/2)^2}\hat{i}\\&=\frac{1}{2\pi\varepsilon_0}\frac{pr}{(r-d/2)^2(r+d/2)^2}\hat{i}.\end{aligned}$
+$\begin{aligned}\vec{E}&=\frac{q}{4\pi\varepsilon_0}(\frac{1}{(r-d/2)^2}-\frac{1}{(r+d/2)^2})\hat{\imath}\\&=\frac{q}{4\pi\varepsilon_0}\frac{2rd}{(r-d/2)^2(r+d/2)^2}\hat{\imath}\\&=\frac{1}{2\pi\varepsilon_0}\frac{pr}{(r-d/2)^2(r+d/2)^2}\hat{\imath}.\end{aligned}$
 
-If $r\gg d$, then $\displaystyle \vec{E}\approx \frac{p}{2\pi\varepsilon_0r^3}\hat{i}$, which is proportional to $\displaystyle\frac{1}{r^3}$.
+If $r\gg d$, then $\displaystyle \vec{E}\approx \frac{p}{2\pi\varepsilon_0r^3}\hat{\imath}$, which is proportional to $\displaystyle\frac{1}{r^3}$.
 
 #### y-axis
 
 In this case,
 
-$\begin{aligned}\vec{E}&=\frac{q}{4\pi\varepsilon_0}\frac{1}{r^2+(d/2)^2}(-2\frac{d/2}{\sqrt{r^2+(d/2)^2}})\hat{i}\\&=-\frac{p}{4\pi\varepsilon_0}\frac{1}{(r^2+(d/2)^2)^\frac{3}{2}}\hat{i}.\end{aligned}$
+$\begin{aligned}\vec{E}&=\frac{q}{4\pi\varepsilon_0}\frac{1}{r^2+(d/2)^2}(-2\frac{d/2}{\sqrt{r^2+(d/2)^2}})\hat{\imath}\\&=-\frac{p}{4\pi\varepsilon_0}\frac{1}{(r^2+(d/2)^2)^\frac{3}{2}}\hat{\imath}.\end{aligned}$
 
-If $r\gg d$, then $\displaystyle \vec{E}\approx -\frac{p}{4\pi\varepsilon_0r^3}\hat{i}$, which is again, proportional to $\displaystyle\frac{1}{r^3}$.
+If $r\gg d$, then $\displaystyle \vec{E}\approx -\frac{p}{4\pi\varepsilon_0r^3}\hat{\imath}$, which is again, proportional to $\displaystyle\frac{1}{r^3}$.
 
 #### General?
 
-What if we just assume $r\gg d$ and don't specify the location? Think about every step in the following derivation, remember that in polar coordinate, $\hat{r}=\cos\theta\hat{i}+\sin\theta\hat{j}$ and $\hat{\theta}=-\sin\theta\hat{i}+\cos\theta\hat{j}$
+What if we just assume $r\gg d$ and don't specify the location? Think about every step in the following derivation, remember that in polar coordinate, $\hat{r}=\cos\theta\hat{i}+\sin\theta\hat{\jmath}$ and $\hat{\theta}=-\sin\theta\hat{i}+\cos\theta\hat{\jmath}$
 
 $\begin{aligned}\vec{E}&=\frac{q}{4\pi\varepsilon_0}(\frac{\hat{r}_+}{||\vec{r}_+||^2}-\frac{\hat{r}_-}{||\vec{r}_-||^2})\\&=\frac{q}{4\pi\varepsilon_0}(\frac{\vec{r}_+}{r_+^3}-\frac{\vec{r}_-}{r_-^3})\\&=\frac{q}{4\pi\varepsilon_0}\frac{r_-^{3}(\vec{r}-\frac{1}{2}\vec{d})-r_{+}^{3}(\vec{r}+\frac{1}{2}\vec{d})}{r_+^3r_-^3}\\&\approx\frac{q}{4\pi\varepsilon_0}\frac{(r_{-}^{3}-r_{+}^{3})\vec{r}-\frac{1}{2}(r_{-}^{3}+r_{+}^{3})\vec{d}}{r^6}.\end{aligned}$
 
@@ -196,7 +197,7 @@ Thus, $\displaystyle \vec{A}\approx r^3d(2\cos\theta\hat{r}-\sin\theta\hat{\thet
 
 $\displaystyle \vec{E}\approx \frac{qd}{4\pi\varepsilon_0r^3}(2\cos\theta\hat{r}+\sin\theta\hat{\theta})=\frac{p}{4\pi\varepsilon_0r^3}(2\cos\theta\hat{r}+\sin\theta\hat{\theta})$.
 
-If you set $\theta=0$ or $\theta=\frac{\pi}{2}$, you will get exactly the same formula as we did for $x$ and $y$ axis. This formula has a coordinate-free form, which can be derived by writing $\hat{\theta}$ in terms of $\hat{r}$ and $\hat{i}$:
+If you set $\theta=0$ or $\theta=\frac{\pi}{2}$, you will get exactly the same formula as we did for $x$ and $y$ axis. This formula has a coordinate-free form, which can be derived by writing $\hat{\theta}$ in terms of $\hat{r}$ and $\hat{\imath}$:
 
 $\displaystyle \vec{E}=\frac1{4\pi\varepsilon_0r^3}\left(3\left(\vec{p}\cdot\hat{r}\right)\hat{r}-\vec{p}\right).$
 
