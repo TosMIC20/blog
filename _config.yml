@@ -106,15 +106,3 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
-
-markdown:
-  preset: 'default'
-  anchors:
-    level: 1
-    collisionSuffix: ''
-    permalink: true
-    permalinkClass: 'header-anchor'
-    permalinkSide: 'left'
-    permalinkSymbol: '¶'
-    case: 0
-    separator: '-'
