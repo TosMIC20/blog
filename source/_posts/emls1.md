@@ -183,16 +183,19 @@ If $r\gg d$, then $\displaystyle \vec{E}\approx -\frac{p}{4\pi\varepsilon_0r^3}\
 
 What if we just assume $r\gg d$ and don't specify the location? Think about every step in the following derivation, remember that in polar coordinate, $\hat{r}=\cos\theta\hat{i}+\sin\theta\hat{\jmath}$ and $\hat{\theta}=-\sin\theta\hat{i}+\cos\theta\hat{\jmath}$
 
-$\begin{aligned}\vec{E}&=\frac{q}{4\pi\varepsilon_0}(\frac{\hat{r}_+}{||\vec{r}_+||^2}-\frac{\hat{r}_-}{||\vec{r}_-||^2})\\&=\frac{q}{4\pi\varepsilon_0}(\frac{\vec{r}_+}{r_+^3}-\frac{\vec{r}_-}{r_-^3})\\&=\frac{q}{4\pi\varepsilon_0}\frac{r_-^{3}(\vec{r}-\frac{1}{2}\vec{d})-r_{+}^{3}(\vec{r}+\frac{1}{2}\vec{d})}{r_+^3r_-^3}\\&\approx\frac{q}{4\pi\varepsilon_0}\frac{(r_{-}^{3}-r_{+}^{3})\vec{r}-\frac{1}{2}(r_{-}^{3}+r_{+}^{3})\vec{d}}{r^6}.\end{aligned}$
-
+$$
+\begin{aligned}\vec{E}&=\frac{q}{4\pi\varepsilon_0}(\frac{\hat{r}_+}{||\vec{r}_+||^2}-\frac{\hat{r}_-}{||\vec{r}_-||^2})\\&=\frac{q}{4\pi\varepsilon_0}(\frac{\vec{r}_+}{r_+^3}-\frac{\vec{r}_-}{r_-^3})\\&=\frac{q}{4\pi\varepsilon_0}\frac{r_-^{3}(\vec{r}-\frac{1}{2}\vec{d})-r_{+}^{3}(\vec{r}+\frac{1}{2}\vec{d})}{r_+^3r_-^3}\\&\approx\frac{q}{4\pi\varepsilon_0}\frac{(r_{-}^{3}-r_{+}^{3})\vec{r}-\frac{1}{2}(r_{-}^{3}+r_{+}^{3})\vec{d}}{r^6}.\end{aligned}
+$$
 Now let's focus on the second fraction's numerator $\vec{A}$ . Verify yourself that $\vec{d}=d\cos\theta\hat{r}-d\sin\theta\hat{\theta}$, and therefore:
 
-$\begin{aligned}\vec{A}&=\left((r_{-}^{3}-r_{+}^{3})r-\frac{1}{2}(r_-^3+r_+^3)d\cos\theta\right)\hat{r}+\frac{1}{2}(r_-^3+r_+^3)d\sin\theta\hat{\theta}\end{aligned}$
-
+$$
+\begin{aligned}\vec{A}&=\left((r_{-}^{3}-r_{+}^{3})r-\frac{1}{2}(r_-^3+r_+^3)d\cos\theta\right)\hat{r}+\frac{1}{2}(r_-^3+r_+^3)d\sin\theta\hat{\theta}\end{aligned}
+$$
 The $\hat{\theta}$ term is approximately $r^3d\sin\theta\hat{\theta}$. The key is the $\hat{r}$ term.
 
-$\begin{aligned}(\ldots)\hat{r}&=\frac{1}{r_-^3+r_+^3}((r_{-}^{3}-r_{+}^{3})(r_-^3+r_+^3)r-\frac{1}{2}(r_-^3+r_+^3)^2d\cos\theta)\hat{r}\\ &\approx\frac{1}{2r^3}((r_{-}^{6}-r_{+}^{6})r-\frac{1}{2}(r_-^3+r_+^3)^2d\cos\theta)\hat{r}\\ &=\frac{1}{2r^3}((r_{-}^{2}-r_{+}^{2})(r_-^4+r_+^4+r_-^2r_+^2)r-\frac{1}{2}(r_-^3+r_+^3)^2d\cos\theta)\hat{r}\\ &=\frac{1}{2r^3}((2rd\cos\theta)(r_-^4+r_+^4+r_-^2r_+^2)r-\frac{1}{2}(r_-^3+r_+^3)^2d\cos\theta)\hat{r}\\ &=\frac{d\cos\theta}{2r^3}(2r^2(r_-^4+r_+^4+r_-^2r_+^2)-\frac{1}{2}(r_-^3+r_+^3)^2)\hat{r}\\ &\approx \frac{d\cos\theta}{2r^3}(2r^2\cdot 3r^4-\frac{1}{2}\cdot 4r^6)\hat{r}\\ &=2r^3d\cos\theta.\end{aligned}$
-
+$$
+\begin{aligned}(\ldots)\hat{r}&=\frac{1}{r_-^3+r_+^3}((r_{-}^{3}-r_{+}^{3})(r_-^3+r_+^3)r-\frac{1}{2}(r_-^3+r_+^3)^2d\cos\theta)\hat{r}\\ &\approx\frac{1}{2r^3}((r_{-}^{6}-r_{+}^{6})r-\frac{1}{2}(r_-^3+r_+^3)^2d\cos\theta)\hat{r}\\ &=\frac{1}{2r^3}((r_{-}^{2}-r_{+}^{2})(r_-^4+r_+^4+r_-^2r_+^2)r-\frac{1}{2}(r_-^3+r_+^3)^2d\cos\theta)\hat{r}\\ &=\frac{1}{2r^3}((2rd\cos\theta)(r_-^4+r_+^4+r_-^2r_+^2)r-\frac{1}{2}(r_-^3+r_+^3)^2d\cos\theta)\hat{r}\\ &=\frac{d\cos\theta}{2r^3}(2r^2(r_-^4+r_+^4+r_-^2r_+^2)-\frac{1}{2}(r_-^3+r_+^3)^2)\hat{r}\\ &\approx \frac{d\cos\theta}{2r^3}(2r^2\cdot 3r^4-\frac{1}{2}\cdot 4r^6)\hat{r}\\ &=2r^3d\cos\theta.\end{aligned}
+$$
 Thus, $\displaystyle \vec{A}\approx r^3d(2\cos\theta\hat{r}-\sin\theta\hat{\theta})$, which means:
 
 $\displaystyle \vec{E}\approx \frac{qd}{4\pi\varepsilon_0r^3}(2\cos\theta\hat{r}+\sin\theta\hat{\theta})=\frac{p}{4\pi\varepsilon_0r^3}(2\cos\theta\hat{r}+\sin\theta\hat{\theta})$.
