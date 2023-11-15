@@ -5,10 +5,11 @@ toc:
   enable: false
 ---
 
-# About Me
+## About This Blog
 
-A sophomore of Dept. of CST, Tsinghua University.
-清華大学コンピューター科学技術学部の二年生です。
+This blog mainly includes notes for some lectures. 
 
-Interested in math, baseball and anime.
-数学、野球、アニメに興味を持っています。
+Most contents are copied from textbook, lecture slides or somewhere on the internet.
+
+This blog is just a trial. Actually, the conclusion is that hexo+githubpages is not a good choice.
+
