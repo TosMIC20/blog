@@ -25,6 +25,8 @@ The ***capacitance*** $C$ of a capacitor is defined to be the ratio of the charg
 > C=\frac{Q}{\Delta V}.
 > $$
 
+<!-- more -->
+
 For a special case, consider a charged sphere shell with radius $R$ . Another conductor is at infinity, so:
 $$
 C=\frac{Q}{\Delta V}=\frac{Q}{\frac{1}{4\pi \varepsilon_0}\frac{Q}{R}}=4\pi \varepsilon_0 R.
@@ -66,11 +68,12 @@ $$
 $$
 But consider the middle one. On each conductor surface $V_3$ must be constant (This comes from $V_1$ and $V_2$ are constant.), thus:
 $$
-\begin{align*}
-\oint_{\partial V}V_{3}\vec{E}_{3}\cdot d\vec{A}&=\sum\oint_{S_i}V_{3}\vec{E}_{3}\cdot d\vec{A}\\
+\begin{aligned}
+\oint_{\partial V}V_{3}\vec{E}_{3}\cdot d\vec{A}
+&=\sum\oint_{S_i}V_{3}\vec{E}_{3}\cdot d\vec{A}\\
 &=\sum V_{3}\oint_{S_i}\vec{E}_{3}\cdot d\vec{A}\\
 &=0.
-\end{align*}
+\end{aligned}
 $$
 Thus:
 $$

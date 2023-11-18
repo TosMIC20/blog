@@ -24,6 +24,7 @@ For a general electric field:
 $$
 \tag{1}\vec{E}(\vec{x})=\frac{1}{4\pi\varepsilon_{0}}\int\frac{\rho(\vec{r})(\vec{x}-\vec{r})}{\|\vec{x}-\vec{r}\|^{3}}d\vec{r}.
 $$
+
 <!-- more -->
 
 Thus, writing $x_1,x_2,x_3$ in place of $x,y,z$, we get:
@@ -90,14 +91,14 @@ Where $Q$ is the total charge inside $A$. This is true for any charge distributi
 Again, we assume $\rho$ is nice enough, thus we can change the sequence of integration.
 
 $$
-\begin{align}
+\begin{aligned}
 \phi_E &=\oint_A\vec{E}\cdot d\vec{A}\\ 
 &=\oint_A\left(\frac{1}{4\pi\varepsilon_{0}}\int\frac{\rho(\vec{r})(\vec{x}-\vec{r})}{\|\vec{x}-\vec{r}\|^{3}}d\vec{r}\right)\cdot d\vec{A}\\ 
 &=\frac{1}{4\pi\varepsilon_{0}}\int\rho(\vec{r})\left(\oint_A\frac{\vec{x}-\vec{r}}{\|\vec{x}-\vec{r}\|^{3}}\cdot d\vec{A}\right)d\vec{r}\\
 \tag{-}&=\frac{1}{4\pi\varepsilon_{0}}\int\rho(\vec{r})\cdot (4\pi) d\vec{r}\\
 &=\frac{1}{\varepsilon_{0}}\int\rho(\vec{r})d\vec{r}\\
 &=\frac{Q}{\varepsilon_0}.
-\end{align}
+\end{aligned}
 $$
 Where $(\text{-})$ comes from previous conclusion. Actually this proof is still not exact, since we require $A$ to contain all charge. When $A$ is arbitrary, the change may be incorrect. (why?) But Gauss' law is true for any $A$, 
 
