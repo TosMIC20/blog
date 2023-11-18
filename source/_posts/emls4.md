@@ -99,11 +99,11 @@ Q'_i=\oint_{S_i}k\sigma_idS_i=k\oint_{S_i}\sigma_idS_i=kQ_i.
 $$
 Thus $\vec{Q}'=k\vec{Q}$. The uniqueness theorem tells us that the electric field with $k\vec{Q}$ is unique. It must corresponds to the field given by $k\vec{\sigma}$. Since:
 $$
-\Delta V=\sum\int\frac{\sigma_i}{\|\vec{x}-\vec{r}\|}dS_i.
+\Delta V=\sum\oint_{S_i}\frac{\sigma_i}{\|\vec{x}-\vec{r}\|}dS_i.
 $$
 We know that:
 $$
-\Delta V'=\sum\int\frac{k\sigma_i}{\|\vec{x}-\vec{r}\|}dS_i=k\sum\int\frac{\sigma_i}{\|\vec{x}-\vec{r}\|}dS_i=k\Delta V.
+\Delta V'=\sum\oint_{S_i}\frac{k\sigma_i}{\|\vec{x}-\vec{r}\|}dS_i=k\sum\oint_{S_i}\frac{\sigma_i}{\|\vec{x}-\vec{r}\|}dS_i=k\Delta V.
 $$
 Therefore, we have arrived at what we want.
 
