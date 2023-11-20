@@ -158,4 +158,56 @@ An understanding for $\frac{1}{2}$ there is think of $W=\frac{Q^2}{2C}=\frac{1}{
 
 ## Electric Field Energy
 
-*to be continued...*
+In last note, we derived that the work needed to establish a discrete charge distribution:
+$$
+W=\frac{1}{2}\sum_{i=1}^n q_iV(\vec{r}_i).
+$$
+For continuous charge distribution, is there similar formula? Yes, for continuous  charge distribution:
+$$
+W=\frac{1}{2}\int\rho(\vec{r}) V(\vec{r})d\vec{r}.
+$$
+Direct rigorous proof requires functional analysis, so here we prove it with energy conservation.
+
+Due to energy conservation, the work needed to be done is independent of the way we form the charge, thus we can form the distribution $\rho$ by gradually raising the charge density at each location from $0$ to $\rho$ linearly, that is $\rho'=k\rho$, $k$ grows from $0$ to $1$. Then we know $V'=kV$. Thus:
+$$
+W=\int_0^1\left(\int k\rho\cdot kVd\vec{r}\right)dk=\frac{1}{2}\int\rho Vd\vec{r}.
+$$
+Now we substitute $\rho$ with $\vec{E}$ with Gauss' law, we would get:
+$$
+\begin{aligned}
+W&=\frac{1}{2}\int\rho Vd\vec{r}\\
+&=\frac{\varepsilon_0}{2}\int(\vec{\nabla}\cdot \vec{E}) Vd\vec{r}\\
+&=\frac{\varepsilon_0}{2}\left(\int\vec{\nabla}\cdot (\vec{E}V)d\vec{r}-\int\vec{E}\cdot\vec{\nabla}Vd\vec{r}\right)\\
+&=\frac{\varepsilon_0}{2}\left(\int E^2d\vec{r}+\oint\vec{E}Vd\vec{S}\right)\\
+\end{aligned}
+$$
+It's the same whether integration zone is a finite volume $\mathcal{V}$ where $\rho\ne 0$, or the whole $\mathbb{R}^3$, and a ball $B_R$ containing $\mathcal{V}$. 
+
+Now consider the zone to be a ball $B_R$ with radius $R$, which is very large compared to size of $\mathcal{V}$. In this case, the charge system can be approximated by a point charge $Q$. Then:
+$$
+\begin{aligned}
+\oint_{\partial B_R}\vec{E}Vd\vec{S}&\approx\oint_{\partial B_R}\frac{kQ}{R^2}\cdot\frac{kQ}{R}dS\\
+&=4\pi R^2\cdot\frac{k^2Q^2}{R^3}\\
+&=\frac{4\pi k^2Q^2}{R}\to 0,\ R\to \infty.
+\end{aligned}
+$$
+Thus:
+$$
+\begin{aligned}
+\int_{\mathbb{R}^3}\vec{\nabla}\cdot (\vec{E}V)d\vec{r}&=\lim_{R\to \infty}\int_{B_R}\vec{\nabla}\cdot (\vec{E}V)d\vec{r}\\
+&=\lim_{R\to \infty}\oint_{\partial B_R}\vec{E}Vd\vec{S}\\
+&=0.
+\end{aligned}
+$$
+Therefore, we have:
+$$
+W=\frac{1}{2}\int_{\mathbb{R}^3}\rho Vd\vec{r}=\frac{\varepsilon_0}{2}\int_{\mathbb{R}^3}E^2d\vec{r}
+$$
+This is also the total potential energy $U$ of the system, if we define energy density $u$ at a point to be:
+$$
+u=\frac{\varepsilon_0}{2}E^2.
+$$
+Then:
+$$
+U=\int_{\mathbb{R}^3}ud\vec{r}.
+$$
